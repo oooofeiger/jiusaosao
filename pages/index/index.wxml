@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button type='primary' bindtap="bindViewTap"> 点击扫描 </button>
+    
+  </view>
+  <view class="usermotto">
+    <text selectable="{{true}}" class="textInfo">{{info?info:''}}</text>
+  </view>
+  <loading hidden="{{loadingHidden}}">
+        加载中...
+  </loading>
+</view>
