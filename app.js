@@ -1,10 +1,26 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function ({shareTicket}) {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+
+    //打开分享功能
+    wx.showShareMenu({
+      withShareTicket: true,
+      success: res => {
+        console.log(res)
+      }
+    })
+    //获取分享的信息
+    // console.log(shareTicket)
+    shareTicket && wx.getShareInfo({
+      shareTicket: shareTicket,
+      success: res => {
+        console.log(res);
+      }
+    })
 
     // 登录
     // wx.login({

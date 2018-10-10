@@ -27,13 +27,29 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/index/index",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "NbwjC5yFMCIUQbJBklfxnoZVEse76BUTmRnzX-eytus@cr4dev",
+						"shareKey": "W4554fGvUYVfYhSNkqNyLMzx00F7o-M5KhatLePYNI6jWdUiUOhlVlApff1mPGL8nztRhcSRy2XM7P0hOqw4Zg~~"
+					}
+				}
+			]
 		}
 	}
 }
