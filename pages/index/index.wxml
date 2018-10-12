@@ -1,12 +1,15 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container" bindlongtap="longTap" style='background:url({{currentTheme.path}});background-size:100% 100%;'>
   <view class="userinfo">
-    <button type='primary' bindtap="bindViewTap"> 点击扫描 </button>
-    
+    <button type='primary' 
+    style="color:{{currentTheme.buttonColor}};border-color:{{currentTheme.buttonColor}};background-color:{{currentTheme.buttonBgr?currentTheme.buttonBgr:'transparent'}}" 
+    plain="{{currentTheme.plain!==undefined?currentTheme.plain:true}}" 
+    bindtap="bindViewTap"> 点击扫描 </button>
   </view>
   <view class="usermotto">
-    <text selectable="{{true}}" class="textInfo">{{info?info:''}}</text>
+    <text selectable="{{true}}" style='color:{{currentTheme.textColor}}' class="textInfo">{{info?info:''}}</text>
   </view>
+  <image src="{{currentTheme.path}}" style='display:none' bindload="handleImageLoad" binderror="handleImageErr"></image>
   <loading hidden="{{loadingHidden}}">
         加载中...
   </loading>
