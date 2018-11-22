@@ -10,7 +10,6 @@ Page({
     info:null,
     loadingHidden: true,
     currentTheme:null,
-    affix: wx.getMenuButtonBoundingClientRect(),
   },
   longTap: function(){
     let itemList = ['固定当前主题'];
